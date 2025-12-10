@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://127.0.0.1:5500/My%20portfolio3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./Jovita Portfolio_files/all.min.css">
+  <title>My Portfolio</title>
+  <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+ }
+
+ :root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+ }
+
+ html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+ }
+
+ body {
+  background: var(--bg-color);
+  color: var(--text-color);
+ }
+
+ section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+ }
+
+ .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+ }
+
+ .header .sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+ }
+
+ .logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+ }
+
+ .navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: o.3rem;
+ }
+
+ .navbar a:hover, .navbar a.active {
+  color: var(--main-color);
+ }
+
+ #menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+ }
+
+ .home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .home-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 8px solid var(--main-color);
+  background: var(--main-color);
+  animation: floatimage 4s ease-in-out infinite;
+  clip-path: polygon(
+    25% 0%,
+    70% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  box-shadow: 0 0 40px var(--main-color), 0 0 70px var(--main-color), 0 0 100px var(--main-color) 0 0 140px var(--main-color);
+ }
+
+  @keyframes floatimage {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2.4rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+ .home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+ }
+
+ .home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+ }
+
+
+ .home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+ }
+
+ .home-content p {
+  font-size: 1.6rem;
+ }
+
+ .social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+ }
+
+ .social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0  1rem var(--main-color);
+ }
+
+ span {
+  color: var(--main-color);
+ }
+
+ .btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+ }
+
+ .btn:hover {
+  box-shadow: none;
+ }
+
+ .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+  /*flex-direction: column-revers;*/
+ }
+
+ .about-image img {
+  width: 200px;
+  box-shadow: 0 0 40px var(--main-color), 0 0 70px var(--main-color), 0 0 100px var(--main-color) 0 0 140px var(--main-color);
+
+ }
+
+ .heading {
+  text-align: center;
+  font-size: 4.5rem;
+ }
+
+ .about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+ }
+
+ .about-content h3 {
+  font-size: 2.6rem;
+ }
+
+ .about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+ }
+
+ .skills h2 {
+  margin-bottom: 3rem;
+ }
+
+ .skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+ }
+
+
+ .skills-container .skills-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+ }
+
+ .skills-box {
+  font-size: 7rem;
+  color: var(--main-color);
+ }
+
+ .skills-box h3 {
+  font-size: 2.6rem;
+ }
+
+ .skills-box span {
+  font-size: 1.6rem;
+  margin-top: 1rem 0 3rem;
+ }
+
+ .skills-container .skills-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+ }
+
+ .projects {
+  background: var(--second-bg-color);
+ }
+
+ .projects h2 {
+  margin-bottom: 4rem;
+ }
+
+ .projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+ }
+
+ .projects-container .projects-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+  }
+
+  .projects-box img {
+    width: 100%;
+    transition: 0.5s ease;
+  }
+
+  .projects-box .projects-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    transition: 0.5s ease;
+    transform: translateY(100%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+  }
+
+  .projects-layer h4 {
+    font-size: 3rem;
+  }
+
+  .projects-layer p {
+    font-size: 1.6rem;
+    margin: 3rem 0 1rem;
+  } 
+
+  .projects-box:hover img {
+    transform: scale(1.1);
+  }
+
+  .projects-box:hover .projects-layer {
+    transform: translateY(0);
+  }
+
+  .contact h2 {
+    margin-bottom: 3rem;
+  }
+
+  .contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: 7rem 0;
+  }
+
+  .contact form .input-box input {
+    width: 49%;
+  }
+
+  .contact form textarea {
+    resize: none;
+  }
+
+  .contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+  }
+
+  .footer-text p {
+    font-size: 1.6rem;
+  }
+
+  .footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: 0.5s ease;
+  }
+
+  .footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+  }
+
+  .footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+  }
+
+  /*BREAKPOINT*/
+  @media (max-width: 1200px) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      padding: 2rem 3%;
+    }
+    section {
+      padding: 10rem 3% 2rem;
+    }
+    .skills {
+      padding-bottom: 7rem;
+    }
+    .footer {
+      padding: 2rem 3%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #menu-icon {
+      display: block;
+    }
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 3%;
+      background: var(--bg-color);
+      border-top: 1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+    .navbar .active {
+       display: block;
+    }
+    .navbar a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+    }
+  }
+
+
+  /*.home {
+    flex-direction: column;
+  }*/
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-image img {
+    width: 250px;
+    margin-top: 4rem;
+  }
+
+  .skills h2 {
+    margin-bottom: 3rem;
+  }
+
+  .projects h2 {
+    margin-bottom: 3rem;
+  }
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 617px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+    .contact form .input-box input {
+      width: 100%;
+    }
+  }
+  @media (max-width: 365px) {
+    .home-image img {
+      width: 90vw;
+    }
+    .about-image img {
+      width: 90vw;
+    }
+    .footer {
+      flex-direction: column-reverse;
+    }
+    .footer p {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  
+
+
+  
+  </style>
+
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="http://127.0.0.1:5500/My%20portfolio3.html#" class="logo">Chisom<span>/</span></a>
+      <i class="fa fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+       <a href="http://127.0.0.1:5500/My%20portfolio3.html#home" class="active">Home</a>
+       <a href="http://127.0.0.1:5500/My%20portfolio3.html#about">About</a>
+       <a href="http://127.0.0.1:5500/My%20portfolio3.html#skills">Skills</a>
+       <a href="http://127.0.0.1:5500/My%20portfolio3.html#projects">Projects</a>
+       <a href="http://127.0.0.1:5500/My%20portfolio3.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!--home section design-->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, it's Me</h3>
+        <h1>Chisom</h1>
+        <h3>And I'm a <span>Frontend Developer(Beginner)</span></h3>
+        <p>I started my journey in biochemistry, but discovered a passion for creating digital products.</p>
+        <div class="social-media">
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-facebook"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-twitter"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-instagram"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-linkedin"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="http://127.0.0.1:5500/My%20portfolio3.html#" class="btn">Download CV</a>
+      </div>
+      <div class="home-image">
+        <img src="./Jovita Portfolio_files/Jovita.jpeg" alt="">
+      </div>
+    </section>
+
+    <!--About section design-->
+    <section class="about" id="about">
+      <div class="about-image">
+        <img src="./Jovita Portfolio_files/Jovita.jpeg" alt="">
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer(Beginner)</h3>
+        <p>I am a biochemistry graduate learning Frontend Web Development. I enjoy creating clean interfaces using HTML, CSS and JavaScript. My scientific background has taught me discipline, precision, and logical thinking which I now apply to building simple and user-friendly web pages.</p>
+      </div>
+    </section>
+
+    <!---Skill section design-->
+    <section class="skills" id="skills">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <div class="skills-container">
+        <div class="skills-box">
+          <i class="fa-solid fa-code"></i>
+        <h3>Web Development(Beginner)</h3>
+       <span class="code">HTML5 <i class="fa-brands fa-html5"></i></span>
+        <span class="code">CSS3 <i class="fa-brands fa-css3-alt"></i></span>
+        <span class="code">JavaScript(Basics) <i class="fa-brands fa-js"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!--Project section design-->
+    <section class="projects" id="projects">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="projects-container">
+        <div class="projects-box">
+          <img src="./Jovita Portfolio_files/lovely.jpg" alt="">
+        <div class="projects-layer">
+          <h4>Todo App</h4>
+          <p>A simple to-do list app built with HTML, CSS and JavaScript.</p>
+        </div>
+        </div>
+
+        <div class="projects-box">
+          <img src="./Jovita Portfolio_files/lovely.jpg" alt="">
+        <div class="projects-layer">
+          <h4>Rock Paper Scissors</h4>
+          <p>A mini JavaScript game with simple UI.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!---contact section design-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+
+      <form action="http://127.0.0.1:5500/My%20portfolio3.html#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile number">
+          <input type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+         <input type="submit" value="Send Message" class="btn">
+      </form>
+    </section>
+
+    <!--footer design-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>© 2025 my Portfolio | Built with motivation and ❤️</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="http://127.0.0.1:5500/My%20portfolio3.html#home"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      //-----toggle ion navbar-----
+      let menuIcon = document.querySelector('#menu-icon');
+      let navbar = document.querySelector('.navbar');
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle('fa-xmark');
+        navbar.classList.toggle('active');
+      };
+
+      //------Scroll setion active link-----
+      let sections = document.querySelectorAll('section');
+      let navLinks = document.querySelectorAll('header nav a');
+      window.onscroll = () => {
+        sections.forEach(sec => {
+          let top = window.scrollY;
+          let offset = sec.offsetHeight; 
+          let id = sec.getAtrribute('id');
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+              links.classList.remove('active');
+              document.querySelector('header nav a [href*='+ id +']').classList.add('active');
+            });
+          } ;    
+         });
+
+         //-----sticky navbar----
+         let header = document.querySelector('header');
+         header.classList.toggle('sticky', window.scrollY > 100);
+      };
+
+      //----remove toggle icon and navbar when click navbar link(scroll)-----
+      menuIcon.classList.remove('fa-xmark');
+      navbar.classList.remove('active')
+    </script>
+
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+  </body></html>
