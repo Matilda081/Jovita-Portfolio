@@ -505,7 +505,7 @@
   <body>
     <header class="header">
       <a href="http://127.0.0.1:5500/My%20portfolio3.html#" class="logo">Chisom<span>/</span></a>
-      <i class="fa fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
       <nav class="navbar">
        <a href="http://127.0.0.1:5500/My%20portfolio3.html#home" class="active">Home</a>
        <a href="http://127.0.0.1:5500/My%20portfolio3.html#about">About</a>
@@ -523,11 +523,11 @@
         <h3>And I'm a <span>Frontend Developer(Beginner)</span></h3>
         <p>I started my journey in biochemistry, but discovered a passion for creating digital products.</p>
         <div class="social-media">
-          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-facebook"></i></a>
-          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-twitter"></i></a>
-          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-instagram"></i></a>
-          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-linkedin"></i></a>
-          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fab fa-github"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="http://127.0.0.1:5500/My%20portfolio3.html#"><i class="fa-brands fa-github"></i></a>
         </div>
         <a href="http://127.0.0.1:5500/My%20portfolio3.html#" class="btn">Download CV</a>
       </div>
@@ -627,12 +627,13 @@
       window.onscroll = () => {
         sections.forEach(sec => {
           let top = window.scrollY;
-          let offset = sec.offsetHeight; 
+		  let offset = sec.offsetTop-150;
+          let height = sec.offsetHeight; 
           let id = sec.getAtrribute('id');
           if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
               links.classList.remove('active');
-              document.querySelector('header nav a [href*='+ id +']').classList.add('active');
+              document.querySelector('header nav a[href*='+ id +']').classList.add('active');
             });
           } ;    
          });
